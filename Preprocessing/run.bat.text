@@ -1,0 +1,14 @@
+javac ReadComments.java
+java -cp "mysql-connector-java-5.0.8-bin.jar;." ReadComments
+
+javac ReadBadges.java
+java -cp "mysql-connector-java-5.0.8-bin.jar;." ReadBadges
+
+javac ReadPosts.java
+java -cp "mysql-connector-java-5.0.8-bin.jar;." ReadPosts
+
+javac ReadUsers.java
+java -cp "mysql-connector-java-5.0.8-bin.jar;." ReadUsers
+
+javac ReadVotes.java
+java -cp "mysql-connector-java-5.0.8-bin.jar;." ReadVotes

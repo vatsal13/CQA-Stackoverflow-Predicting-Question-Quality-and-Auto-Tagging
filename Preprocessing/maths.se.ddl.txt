@@ -1,0 +1,209 @@
+CREATE TABLE `math_se_badges_20130531` (
+  `Id` int(11) NOT NULL,
+  `UserId` int(11) NOT NULL,
+  `Name` varchar(50) DEFAULT NULL,
+  `Date` datetime DEFAULT NULL,
+  `Class` tinyint(4) DEFAULT NULL,
+  `TagBased` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `UserId` (`UserId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_comments_20130531` (
+  `Id` int(11) NOT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `Score` int(11) DEFAULT NULL,
+  `Text` varchar(600) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `UserDisplayName` varchar(30) DEFAULT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_post_links_20130531` (
+  `Id` int(11) NOT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `RelatedPostId` int(11) DEFAULT NULL,
+  `LinkTypeId` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_posts_20130531` (
+  `Id` int(11) NOT NULL,
+  `PostTypeId` tinyint(4) DEFAULT NULL,
+  `AcceptedAnswerId` int(11) DEFAULT NULL,
+  `ParentId` int(11) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `DeletionDate` datetime DEFAULT NULL,
+  `Score` int(11) DEFAULT NULL,
+  `ViewCount` int(11) DEFAULT NULL,
+  `Body` text,
+  `OwnerUserId` int(11) DEFAULT NULL,
+  `OwnerDisplayName` varchar(40) DEFAULT NULL,
+  `LastEditorUserId` int(11) DEFAULT NULL,
+  `LastEditorDisplayName` varchar(40) DEFAULT NULL,
+  `LastEditDate` datetime DEFAULT NULL,
+  `LastActivityDate` datetime DEFAULT NULL,
+  `Title` varchar(250) DEFAULT NULL,
+  `Tags` varchar(250) DEFAULT NULL,
+  `AnswerCount` int(11) DEFAULT NULL,
+  `CommentCount` int(11) DEFAULT NULL,
+  `FavoriteCount` int(11) DEFAULT NULL,
+  `ClosedDate` datetime DEFAULT NULL,
+  `CommunityOwnedDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_posts_history_20130531` (
+  `Id` int(11) NOT NULL,
+  `PostHistoryTypeId` tinyint(4) DEFAULT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `RevisionGUID` char(38) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  `UserDisplayName` varchar(40) DEFAULT NULL,
+  `Comment` varchar(400) DEFAULT NULL,
+  `Text` text,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_tags_20130531` (
+  `Id` int(11) NOT NULL,
+  `TagName` varchar(35) DEFAULT NULL,
+  `Count` int(11) DEFAULT NULL,
+  `ExcerptPostId` int(11) DEFAULT NULL,
+  `WikiPostId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_users_20130531` (
+  `Id` int(11) NOT NULL,
+  `Reputation` int(11) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `DisplayName` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
+  `LastAccessDate` datetime DEFAULT NULL,
+  `WebsiteUrl` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `Location` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `Views` int(11) DEFAULT NULL,
+  `UpVotes` int(11) DEFAULT NULL,
+  `DownVotes` int(11) DEFAULT NULL,
+  `Age` int(11) DEFAULT NULL,
+  `AccountId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `math_se_votes_20130531` (
+  `Id` int(11) NOT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `VoteTypeId` tinyint(4) DEFAULT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `BountyAmount` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_badges_20120401` (
+  `Id` int(11) NOT NULL,
+  `UserId` int(11) NOT NULL,
+  `Name` varchar(50) DEFAULT NULL,
+  `Date` datetime DEFAULT NULL,
+  `Class` tinyint(4) DEFAULT NULL,
+  `TagBased` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `UserId` (`UserId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_comments_20120401` (
+  `Id` int(11) NOT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `Score` int(11) DEFAULT NULL,
+  `Text` varchar(600) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `UserDisplayName` varchar(30) DEFAULT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_post_links_20120401` (
+  `Id` int(11) NOT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `RelatedPostId` int(11) DEFAULT NULL,
+  `LinkTypeId` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_posts_20120401` (
+  `Id` int(11) NOT NULL,
+  `PostTypeId` tinyint(4) DEFAULT NULL,
+  `AcceptedAnswerId` int(11) DEFAULT NULL,
+  `ParentId` int(11) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `DeletionDate` datetime DEFAULT NULL,
+  `Score` int(11) DEFAULT NULL,
+  `ViewCount` int(11) DEFAULT NULL,
+  `Body` text,
+  `OwnerUserId` int(11) DEFAULT NULL,
+  `OwnerDisplayName` varchar(40) DEFAULT NULL,
+  `LastEditorUserId` int(11) DEFAULT NULL,
+  `LastEditorDisplayName` varchar(40) DEFAULT NULL,
+  `LastEditDate` datetime DEFAULT NULL,
+  `LastActivityDate` datetime DEFAULT NULL,
+  `Title` varchar(250) DEFAULT NULL,
+  `Tags` varchar(250) DEFAULT NULL,
+  `AnswerCount` int(11) DEFAULT NULL,
+  `CommentCount` int(11) DEFAULT NULL,
+  `FavoriteCount` int(11) DEFAULT NULL,
+  `ClosedDate` datetime DEFAULT NULL,
+  `CommunityOwnedDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_posts_history_20120401` (
+  `Id` int(11) NOT NULL,
+  `PostHistoryTypeId` tinyint(4) DEFAULT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `RevisionGUID` char(38) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  `UserDisplayName` varchar(40) DEFAULT NULL,
+  `Comment` varchar(400) DEFAULT NULL,
+  `Text` text,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_tags_20120401` (
+  `Id` int(11) NOT NULL,
+  `TagName` varchar(35) DEFAULT NULL,
+  `Count` int(11) DEFAULT NULL,
+  `ExcerptPostId` int(11) DEFAULT NULL,
+  `WikiPostId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `math_se_users_20120401` (
+  `Id` int(11) NOT NULL,
+  `Reputation` int(11) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `DisplayName` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
+  `LastAccessDate` datetime DEFAULT NULL,
+  `WebsiteUrl` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `Location` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `Views` int(11) DEFAULT NULL,
+  `UpVotes` int(11) DEFAULT NULL,
+  `DownVotes` int(11) DEFAULT NULL,
+  `Age` int(11) DEFAULT NULL,
+  `AccountId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `math_se_votes_20120401` (
+  `Id` int(11) NOT NULL,
+  `PostId` int(11) DEFAULT NULL,
+  `VoteTypeId` tinyint(4) DEFAULT NULL,
+  `UserId` int(11) DEFAULT NULL,
+  `CreationDate` datetime DEFAULT NULL,
+  `BountyAmount` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
